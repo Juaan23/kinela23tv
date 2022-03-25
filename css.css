@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+/* hay que mirar q es esto de border box */
+    }
+    
+    section, footer, aside, article, figure, figcaption, input, label {display: block;}
+    Header  {display: inline-block;}
+    
+    h1 {font: bold 40px helvetica, arial, verdana, sans-serif; padding-bottom: 10px; padding-top: 5px;}
+    h2 {font: bold 25px helvetica, arial, verdana, sans-serif; padding-bottom: 10px; padding-top: 10px;}
+    h3 {font: bold 16px helvetica, arial, verdana, sans-serif; padding-bottom: 10px; padding-top: 5px;}
+    h4 {font: bold italic 40px helvetica, arial, verdana, sans-serif; padding-bottom: 20px; color:#ff8a00; }
+    h5 {font: bold 20px helvetica, arial, verdana, sans-serif; padding-bottom: 10px; padding-top: 5px; color: rgb(5, 153, 0);}
+   
+    body { text-align: left; }
+#cabecera{
+    width: 10px;
+}
+
+.menu_botones { 
+    display:inline-flex;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    height:max-content;
+    background: #222;
+    font: bold 20px verdana, sans-serif;
+    text-align: center;
+    Word-Spacing: 10px;
+    position:center;
+    --transform: rotate(0);
+}
+/* Son los apartados dentro del nav editamos color etc */
+.menu a {
+    display: block;
+    padding: 15px;
+    margin:relative;
+    background-color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    Word-Spacing: 10px;
+
+}
+/* son los iconos de flecha */
+.menu_arrow{
+ transform: var(--transform);
+ transition: transform .40s;
+ display:inline-block;
+ margin-left: 1px;
+ }
+
+ /* son las modificaciones que se hace en menu a */
+.menu a:hover{
+    background-color: #999999;
+    transition: .30s;
+    transform:scale(110%);
+    --transform: rotate(90deg);
+}
+
+/* esto afectará a las listas de la lista */
+.menu ul li ul {
+    display: none;
+    list-style: none;
+    margin:absolute;
+}
+
+/* herencia de menu a */
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: inherit;
+}
+
+#main { /* FONDO NEGRO DE ATRÁS */
+    padding: 20px;
+    background-color: #000;
+    color:#ffffff;
+          }
+    
+    article { /* EL FONDO GRIS DONDE ESTÁ TODO ESCRITO */
+    font: 15px  arial, verdana, sans-serif;
+    text-align: left;
+    line-height: 150%;
+    overflow-wrap: break-all;
+    padding: 20px;
+    color: #ffffff;
+    background: #222;
+    border: 5px solid rgb(255, 0, 0);
+    border-radius: 25px;
+            }
+
+.logo{
+    width: 25%;
+    margin:10px auto;
+    display:block;
+}
+
+.portada{
+    width: max-content;
+
+}
+
+#footer { /* PIE DE PÁGINA */
+    padding: 1%;
+    font: 11px;
+    text-align: center;
+    width: 100%;
+    display: inline-block; 
+    border-top: 2px solid rgb(255, 0, 0);
+    color: #fff;
+    background: #000;
+           }
